@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.galeria {
+  display: flex;
+  gap: 10px;
+}
+
+.galeria img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
