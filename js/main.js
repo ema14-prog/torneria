@@ -1,10 +1,47 @@
-// Ejemplo: animación simple al hacer scroll
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-      sec.classList.add('visible');
-    }
-  });
-});
+// Slider (galeria.html)
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 
-// Podés agregar validación de formulario o integración con Google Maps API
+let index = 0;
+
+function showSlide(i) {
+  index = (i + images.length) % images.length;
+  slides.style.transform = `translateX(${-index * 100}%)`;
+}
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => showSlide(index - 1));
+  nextBtn.addEventListener('click', () => showSlide(index + 1));
+  setInterval(() => showSlide(index + 1), 5000);
+}
+
+// Formulario de contacto (contacto.html)
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    if (nombre === "" || email === "" || mensaje === "") {
+      alert("Por favor completa todos los campos.");
+      return;
+    }
+
+    // Validación básica de email
+    const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert("Por favor ingresa un email válido.");
+      return;
+    }
+
+    // Simulación de envío (podés integrar EmailJS o backend real)
+    alert("¡Gracias por tu mensaje, " + nombre + "! Nos pondremos en contacto pronto.");
+    form.reset();
+  });
+}
+
