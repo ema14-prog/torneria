@@ -4,25 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería - Tornería LF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <header>
-    <h1>Galería</h1>
+    <h1>Tornería LF</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
   <section id="galeria">
-    <div class="slider">
-      <div class="slides">
-        <img src="img/pieza1.jpg" alt="Pieza torneada">
-        <img src="img/pieza2.jpg" alt="Trabajo fresado">
-        <img src="img/pieza3.jpg" alt="Soldadura">
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
+    <h2>Nuestros Trabajos</h2>
+    <div class="galeria-container">
+      <img src="https://picsum.photos/id/1011/400/300" alt="Trabajo 1" class="galeria-img">
+      <img src="https://picsum.photos/id/1015/400/300" alt="Trabajo 2" class="galeria-img">
+      <img src="https://picsum.photos/id/1020/400/300" alt="Trabajo 3" class="galeria-img">
+      <img src="https://picsum.photos/id/1035/400/300" alt="Trabajo 4" class="galeria-img">
     </div>
   </section>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
 </html>
+
+

@@ -45,3 +45,34 @@ if (form) {
   });
 }
 
+// Lightbox para galería
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const caption = document.getElementById('caption');
+const closeBtn = document.querySelector('.close');
+
+const galeriaImgs = document.querySelectorAll('.galeria-img');
+
+if (galeriaImgs.length > 0) {
+  galeriaImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = "block";
+      lightboxImg.src = img.src;
+      caption.innerHTML = img.alt;
+    });
+  });
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = "none";
+  });
+}
+
+window.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
+
+
