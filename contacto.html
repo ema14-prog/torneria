@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,17 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <h1>Tornería LF</h1>
-    <nav>
+    <nav id="menu">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
       <a href="galeria.html">Galería</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
   </header>
 
   <section id="contacto">
@@ -39,9 +42,8 @@
     </form>
 
     <div id="mapa">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!..." 
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;"
+        allowfullscreen="" loading="lazy">
       </iframe>
     </div>
 
@@ -61,4 +63,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

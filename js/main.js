@@ -76,3 +76,14 @@ window.addEventListener('click', (e) => {
 });
 
 
+// Menú hamburguesa
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+if (menuToggle && menu) {
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+}
+
+
